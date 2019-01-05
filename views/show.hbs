@@ -1,0 +1,45 @@
+
+<div>
+{{#each post}}
+    <h1>{{this.title}}</h1>
+    <p>Posted in <a href="/categories/show/{{this.category}}">{{this.category}}</a> by {{this.author}} on {{this.date}}</p><br>
+    <img src="/images/uploads/{{this.mainimage}}">
+
+{{/each}}
+    <br>
+    <hr>
+    {{#if post.comments}}
+    <h3>Comments</h3>
+    {{#each post.comments}}
+    <p>comment-name: {{this.name}}</p>
+    <p>comment-text: {{this.body}}</p>
+    <br>
+    {{/each}}
+    {{/if}}
+
+    <h3>Add Comment</h3>
+
+
+    <form method="post" action="/posts/addcomment">
+        <div class="form-group">
+
+            <input type="hidden" name="postid" value="{{this._id}}" class="form-control">
+        </div>
+        <div class="form-group">
+            Name:
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            Email:
+            <input type="email" name="email" class="form-control">
+        </div>
+         <div class="form-group">
+      Body:
+      <textarea name="body" id="body" class="form-control"  > </textarea>
+    </div>
+    <br>
+    <input type="submit" name="submit" value="Add Comment" class="btn btn-primary">
+    </form>
+
+
+</div>

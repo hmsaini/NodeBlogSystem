@@ -1,0 +1,15 @@
+{{!-- <h1>{{title}}</h1>
+<p>Welcome to {{title}}</p> --}}
+{{#if posts}}
+{{#each posts}}
+<div class="post">
+<h1><a href="/posts/show/{{this._id}}">{{@index}}:{{this.title}}</a></h1>
+<p>Posted in <a href="/categories/show/{{this.category}}">{{this.category}}</a> by {{this.author}} on {{this.date}}</p><br>
+<img src="/images/uploads/{{this.mainimage}}">
+{{!--    !=truncateText(this.body,400)    --}}
+<a href="/posts/show/{{this._id}}" class="btn btn-primary">Read More</a>
+</div>
+{{else}}
+<p>no posts</p>
+{{/each}}
+{{/if}}

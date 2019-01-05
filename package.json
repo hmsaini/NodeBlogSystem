@@ -1,0 +1,27 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "hbs": "~4.0.1",
+    "hbs-moment": "0.0.1",
+    "http-errors": "~1.6.2",
+    "moment": "*",
+    "mongodb": "*",
+    "monk": "*",
+    "morgan": "~1.9.0",
+    "multer": "*",
+    "serve-favicon": "*"
+  }
+}
